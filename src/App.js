@@ -1,14 +1,19 @@
 import React from "react";
+import {Provider} from 'react-redux'
+
 import Header from "./components/Header/Header";
 import ImageGrid from './components/ImageGrid/ImageGrid'
+
+import config from './store'
+const store = config();
 
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <Provider store={store}>
         <Header />
         <ImageGrid />
-      </div>
+      </Provider>
     );
   }
 }
