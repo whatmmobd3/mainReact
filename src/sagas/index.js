@@ -1,15 +1,14 @@
 /* eslint-disable require-yield */
-import { takeEvery, put } from "redux-saga/effects";
+import { takeEvery } from "redux-saga/effects";
+import { IMAGES } from "../constants";
 
-function* workerSaga() {
-  console.log("Hey from worker");
-  console.log(put({ type: "ACTION_FROM_WOKER" }));
-  yield put({ type: "ACTION_FROM_WOKER" });
+function* handleImagesLoad() {
+  console.log("fetch images");
 }
 
 // watcher
 function* rootSaga() {
-  yield takeEvery("HELLO", workerSaga);
+  yield takeEvery(IMAGES.LOAD, handleImagesLoad);
 }
 
 export default rootSaga;
