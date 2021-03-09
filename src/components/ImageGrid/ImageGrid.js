@@ -4,10 +4,9 @@ import { connect } from "react-redux";
 import { loadImages } from "../../actions";
 import "./styles.css";
 
-
 class ImageGrid extends Component {
   componentDidMount() {
-    this.props.loadImages()
+    this.props.loadImages();
   }
 
   render() {
