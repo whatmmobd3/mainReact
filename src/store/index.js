@@ -10,4 +10,4 @@ const config = () => {
   return store;
 };
 
-export default config;
+export default config
