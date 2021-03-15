@@ -1,12 +1,11 @@
 import React from "react";
-import {Provider} from 'react-redux'
+import { Provider } from "react-redux";
 
 import Header from "./components/Header/Header";
-import ImageGrid from './components/ImageGrid/ImageGrid'
+import ImageGrid from "./components/ImageGrid/ImageGrid";
 
-import config from './store'
+import config from "./store"
 const store = config();
-
 class App extends React.Component {
   render() {
     return (
@@ -17,5 +16,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
