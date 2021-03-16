@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:10
 
 WORKDIR /usr/src/app
 
@@ -8,7 +8,7 @@ RUN npm i
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["npm","start"]
 
