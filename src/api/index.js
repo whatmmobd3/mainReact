@@ -1,10 +1,14 @@
-const KEY = "?client_id=5f96323678d05ff0c4eb264ef184556868e303b32a2db88ecbf15746e6f25e02";
+const KEY = "?client_id=47K75D2zwE_quO34auqFyBUUEM8LTjKR595WvZ3r6eI";
 const URL = `https://api.unsplash.com/photos/`;
 
 const fetchImages = async (page) => {
   const response = await fetch(`${URL}${KEY}&per_page=3&page=${page}`);
   const data = await response.json();
-
+  
+  // const id = `0Uw43gNMwbQ`
+  // const aaa = await fetch(`${URL}/${id}/statistics${KEY}`);
+  // const c = await aaa.json();
+  // console.log(c);
   if (response.state > 400) {
     throw new Error(data.error);
   }
@@ -14,7 +18,6 @@ const fetchImages = async (page) => {
 const fetchImageStats = async id => {
   const response = await fetch(`${URL}/${id}/statistics${KEY}`);
   const data = await response.json();
-  console.log(response);
 
   if (response.state > 400) {
     throw new Error(data.error);

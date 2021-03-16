@@ -25,7 +25,7 @@ const setImageStats = (id, downloads) => ({
   downloads,
 });
 
-const setErroStats = (id) => ({
+const setImageStatsError = (id) => ({
   type: STATS.LOAD_FAIL,
   id,
 });
@@ -36,7 +36,7 @@ export {
   setError,
   loadImageStats,
   setImageStats,
-  setErroStats,
+  setImageStatsError,
 };
 
 
